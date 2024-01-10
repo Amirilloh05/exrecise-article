@@ -11,16 +11,25 @@ html {
   box-sizing: inherit;
 }
 
+
+*:focus{
+outline: 2px dashed;
+outline-offset: 2px;
+}
+
+
+
 body {
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family:"Roboto Condensed" , "Arial", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #222;
   color: #222;
 }
 
@@ -106,31 +115,55 @@ select:-webkit-autofill:focus {
   align-items: center;
   width: 100%;
   max-width: 600px;
+  padding: 24px;
   background-image: url("../img/left-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom ;
 }
+
+
 .hero-content {
   max-width: 285px;
 }
+
+
 .hero-heading {
   margin-top: 0;
   margin-bottom: 24px;
+  font-family: "Bebas Neue", "Roboto Condensed", "Arial", sans-serif;
   font-size: 24px;
+  font-weight: 400;
   line-height: normal;
   letter-spacing: 2px;
   color: #fff;
   text-transform: uppercase;
 }
+
+
+
 .hero-link {
   display: inline-block;
+  font-family: "Bebas Neue", "Roboto Condensed", "Arial", sans-serif;
   background-color: #1e90ff;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+
+.hero-link:hover{
+  background-color: rgba(30, 144, 255, 0.80);
+}
+
+
+
+.hero-link:active{
+  background-color: rgba(30, 144, 255, 0.60);
+}
+
+
 .hero-link-inner {
   display: flex;
   padding: 12px 24px ;
@@ -149,16 +182,154 @@ select:-webkit-autofill:focus {
   content: "";
 }
 
-.hero-link-text {
+
+/* LATEST-VIDEOS */
+.latest-videos {
+  width: 100%;
+  max-width: 600px;
+  height: 782px;
+background-color: #FEFEFE;
+  padding: 54px;
+
+}
+
+.latest-videos-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family:  "Bebas Neue";
+  font-size: 24px;
+  line-height: normal;
+  font-weight: 400;
+  letter-spacing:  2px;
+  text-transform: uppercase;
+
+}
+
+.latest-videos-divider {
+  height: 1px;
+  border: 0;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: #999;
+
+
+}
+
+.latest-videos-list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  list-style: none;
+}
+.latest-videos-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 
+/* ITEM-LATEST-VIDEOS */
+.item-latest-videos {
+  display: flex;
+}
+
+.item-latest-videos-img {
+  width: 160px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
 
 
+.item-latest-videos-info {
+  padding: 16px;
+}
+
+.item-latest-videos-heading {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-family:  "Bebas Neue";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.item-latest-videos-link {
+
+  display: inline-block;
+  color: #222;
+  text-decoration: none;
+}
+
+.item-latest-videos-link:hover {
+  color: #1E90FF;
+}
+
+.item-latest-videos-link:active {
+  color: rgba(30, 144, 255, 0.60);
+}
+
+.item-latest-videos-meta {
+  display: flex;
+  align-items: center;
+  color:#888;
+  font-size: 14px;
+  line-height: normal;
+}
 
 
+.item-latest-videos-meta-item {
+  display: flex;
+  align-items: center;
+}
 
 
+.item-latest-videos-meta-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.item-latest-videos-meta-item::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: "";
+}
+
+.item-latest-videos-meta-item-date::before
+{
+  background-image: url(../img/icon-clock.svg);
+}
+
+.item-latest-videos-meta-item-views::before
+{
+  background-image: url(../img/veiw.svg);
+}
+
+
+/* LAST-BUTTON */
+.article-button{
+  width: 100%;
+  padding: 12px;
+  display: block;
+  border: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 700;
+  background-color: #1e90ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.article-button:hover {
+  background-color: rgba(30, 144, 255, 0.80);
+}
+
+.article-button:active {
+  background-color: rgba(30, 144, 255, 0.60);
+}
 
 
 
@@ -284,7 +455,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-.hero {
-  background-image: url("../img/icon-star@2x.svg");
-}
+  .hero {
+    background-image: url("../img/icon-star@2x.svg");
+  }
 }
